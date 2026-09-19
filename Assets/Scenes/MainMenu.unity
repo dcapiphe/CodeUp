@@ -2793,21 +2793,25 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'developers:
+  m_text: 'Lead Developer:
 
-    names
+    Dennis Capiphe
 
-    names
+
+    Developers:
+
+    Ian CJ alejandro
+
+    Saga
+    King
+
+
+    Music:
 
     names
 
 
     2d artist:
-
-    names
-
-
-    Music:
 
     names
 
@@ -4422,7 +4426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1964356245
 RectTransform:
   m_ObjectHideFlags: 0

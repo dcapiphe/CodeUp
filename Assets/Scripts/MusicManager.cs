@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour
     public float bgmVolume = 0.5f;
 
     [Range(0f, 1f)]
-    public float sfxVolume = 0.8f;
+    public float sfxVolume = 0.5f;
 
     private AudioSource bgmSource;
     private AudioSource sfxSource;
