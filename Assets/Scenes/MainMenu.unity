@@ -2770,7 +2770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.864}
   m_AnchorMax: {x: 0.5, y: 0.864}
-  m_AnchoredPosition: {x: 0.000015259, y: -492.84097}
+  m_AnchoredPosition: {x: 0.000015259, y: -488}
   m_SizeDelta: {x: 351.9, y: 575.1451}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101089313
@@ -3848,7 +3848,7 @@ MonoBehaviour:
   buttonClickSFX: {fileID: 8300000, guid: e4129198c29af494abb7991cd1e467b4, type: 3}
   backgroundMusic: {fileID: 0}
   bgmVolume: 1
-  sfxVolume: 1
+  sfxVolume: 0.5
 --- !u!4 &1622585775
 Transform:
   m_ObjectHideFlags: 0
@@ -4426,7 +4426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1964356245
 RectTransform:
   m_ObjectHideFlags: 0
