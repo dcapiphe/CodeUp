@@ -2568,6 +2568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4be579e5c107334a98d745ca92c851c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cppQuestionManager: {fileID: 1336468446}
   playerHP: 5
   enemyHP: 5
   playerHPText: {fileID: 547516214}
@@ -2599,7 +2600,6 @@ MonoBehaviour:
   - {fileID: 169755189}
   - {fileID: 57118176}
   timeLimit: 15
-  correctAnswer: <<
 --- !u!4 &808747827
 Transform:
   m_ObjectHideFlags: 0
@@ -3707,6 +3707,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292602699}
   m_CullTransparentMesh: 1
+--- !u!1 &1336468445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336468447}
+  - component: {fileID: 1336468446}
+  m_Layer: 0
+  m_Name: CppQuestionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1336468446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336468445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11a9fde2a53dd143af3c5d15ed2b665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questions:
+  - codeBefore: cout
+    correctAnswer: <<
+    codeAfter: '"Hello World"'
+    output: Hello World
+  - codeBefore: int x
+    correctAnswer: =
+    codeAfter: 5;
+    output: 5
+  - codeBefore: int x = 2
+    correctAnswer: +
+    codeAfter: 3;
+    output: 5
+  - codeBefore: if (x
+    correctAnswer: '>'
+    codeAfter: 5)
+    output: Condition is true
+  - codeBefore: 
+    correctAnswer: if
+    codeAfter: (x > 5)
+    output: If statement
+  codeText: {fileID: 1478914612}
+  missingSlotText: {fileID: 1669721834}
+  outputText: {fileID: 12428210}
+--- !u!4 &1336468447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336468445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 346.98676, y: 457.3237, z: 0.21619181}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1364300823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,3 +5364,4 @@ SceneRoots:
   - {fileID: 2074364003}
   - {fileID: 808747827}
   - {fileID: 1786763622}
+  - {fileID: 1336468447}

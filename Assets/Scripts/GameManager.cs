@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("C++ Question System")]
+    public CppQuestionManager cppQuestionManager;
+
     [Header("Player and Enemy HP")]
     public int playerHP = 5;
     public int enemyHP = 5;
@@ -29,57 +32,54 @@ public class GameManager : MonoBehaviour
 
     private float currentTime;
 
-    [Header("Question")]
-    public string correctAnswer = "<<";
-
     private string selectedAnswer = "";
 
     private int currentPage = 0;
 
     private string[][] pages =
-{
-    // PAGE 1 - Keywords
-    new string[]
     {
-        "cout",
-        "cin",
-        "int",
-        "char",
-        "bool",
-        "void",
-        "if",
-        "else",
-        "for"
-    },
+        // PAGE 1 - Keywords
+        new string[]
+        {
+            "cout",
+            "cin",
+            "int",
+            "char",
+            "bool",
+            "void",
+            "if",
+            "else",
+            "for"
+        },
 
-    // PAGE 2 - Operators
-    new string[]
-    {
-        "=",
-        "==",
-        "!=",
-        "+",
-        "-",
-        "*",
-        "/",
-        "<",
-        ">"
-    },
+        // PAGE 2 - Operators
+        new string[]
+        {
+            "=",
+            "==",
+            "!=",
+            "+",
+            "-",
+            "*",
+            "/",
+            "<",
+            ">"
+        },
 
-    // PAGE 3 - Syntax
-    new string[]
-    {
-        ";",
-        "(",
-        ")",
-        "{",
-        "}",
-        "\"",
-        "<<",
-        ">>",
-        "endl"
-    }
-};
+        // PAGE 3 - Syntax
+        new string[]
+        {
+            ";",
+            "(",
+            ")",
+            "{",
+            "}",
+            "\"",
+            "<<",
+            ">>",
+            "endl"
+        }
+    };
 
     private void Start()
     {
@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
 
         selectedAnswer = selected;
 
-        missingSlotText.text = selected;
+        cppQuestionManager.DisplaySelectedAnswer(selected);
 
         Debug.Log("Selected: " + selected);
     }
@@ -148,9 +148,14 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (selectedAnswer == correctAnswer)
+        if (cppQuestionManager.CheckAnswer(selectedAnswer))
         {
             EnemyTakeDamage();
+
+            if (enemyHP > 0)
+            {
+                cppQuestionManager.NextQuestion();
+            }
 
             Debug.Log("Correct answer!");
         }
@@ -162,7 +167,8 @@ public class GameManager : MonoBehaviour
         }
 
         selectedAnswer = "";
-        missingSlotText.text = "???";
+
+        cppQuestionManager.DisplayCurrentQuestion();
 
         currentTime = timeLimit;
     }
@@ -230,7 +236,8 @@ public class GameManager : MonoBehaviour
         UpdatePage();
 
         selectedAnswer = "";
-        missingSlotText.text = "???";
+
+        cppQuestionManager.DisplayCurrentQuestion();
     }
 
     private void NextPage()
@@ -243,6 +250,7 @@ public class GameManager : MonoBehaviour
         UpdatePage();
 
         selectedAnswer = "";
-        missingSlotText.text = "???";
+
+        cppQuestionManager.DisplayCurrentQuestion();
     }
 }
