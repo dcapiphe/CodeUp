@@ -57,4 +57,14 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("GameC++");
     }
+
+    public void SelectPython()
+    {
+        SceneManager.LoadScene("GamePython");
+    }
+
+    public void SelectJava()
+    {
+        SceneManager.LoadScene("GameJava");
+    }
 }

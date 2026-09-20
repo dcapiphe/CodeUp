@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameC++.unity
     guid: e7343922d93fcf340902c37de0a3b317
+  - enabled: 1
+    path: Assets/Scenes/GameJava.unity
+    guid: c90de52f87ad3c04fa62291029e2ab29
+  - enabled: 1
+    path: Assets/Scenes/GamePython.unity
+    guid: dc7cdb5897a1a37449b0c1ca45f3076a
   m_configObjects: {}
