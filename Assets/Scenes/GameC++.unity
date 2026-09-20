@@ -3736,25 +3736,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - codeBefore: cout
+  - codeBefore: 'cout '
     correctAnswer: <<
-    codeAfter: '"Hello World"'
+    codeAfter: ' "Hello World"'
     output: Hello World
-  - codeBefore: int x
+  - codeBefore: 'int x '
     correctAnswer: =
-    codeAfter: 5;
+    codeAfter: ' 5;'
     output: 5
-  - codeBefore: int x = 2
+  - codeBefore: 'int x = 2 '
     correctAnswer: +
-    codeAfter: 3;
+    codeAfter: ' 3;'
     output: 5
-  - codeBefore: if (x
+  - codeBefore: 'if (x '
     correctAnswer: '>'
-    codeAfter: 5)
+    codeAfter: ' 5)'
     output: Condition is true
   - codeBefore: 
     correctAnswer: if
-    codeAfter: (x > 5)
+    codeAfter: ' (x > 5)'
     output: If statement
   codeText: {fileID: 1478914612}
   missingBlock: {fileID: 947041428}
