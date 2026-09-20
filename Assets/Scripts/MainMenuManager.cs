@@ -55,6 +55,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void SelectCPlusPlus()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("GameC++");
     }
 }
