@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public TMP_Text playerHPText;
     public TMP_Text enemyHPText;
-    public TMP_Text missingSlotText;
     public TMP_Text outputText;
     public TMP_Text timerText;
 
@@ -102,9 +101,6 @@ public class GameManager : MonoBehaviour
                 SelectSyntax(buttonIndex);
             });
         }
-
-        outputText.text = "Output: Hello World";
-        missingSlotText.text = "???";
     }
 
     private void Update()

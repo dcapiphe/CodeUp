@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class CppQuestionManager : MonoBehaviour
 {
@@ -8,10 +9,26 @@ public class CppQuestionManager : MonoBehaviour
 
     [Header("Question UI")]
     public TMP_Text codeText;
-    public TMP_Text missingSlotText;
+    public Image missingBlock;
+    public TMP_Text missingAnswerText;
     public TMP_Text outputText;
 
+    [Header("Missing Block Size")]
+    public float blockWidth = 100f;
+    public float blockHeight = 50f;
+
+    [Header("Answer Color")]
+    public Color correctAnswerColor = Color.green;
+
+    [Header("Missing Slot Color")]
+    public Color missingSlotColor = Color.yellow;
+
     private int currentQuestionIndex = 0;
+
+    // Saved position of the missing block
+    private Vector3 missingBlockPosition;
+
+    private bool blockPositionSaved = false;
 
     private void Start()
     {
@@ -46,11 +63,35 @@ public class CppQuestionManager : MonoBehaviour
         if (question == null)
             return;
 
-        codeText.text = question.codeBefore + " ??? " + question.codeAfter;
+        blockPositionSaved = false;
 
-        missingSlotText.text = "???";
+        // CodeText ALWAYS keeps the same ??? placeholder.
+        // This prevents the code spacing from changing.
+        string invisibleMissingSlot =
+            "<color=#FFFFFF00>???</color>";
 
-        outputText.text = "Output: " + question.output;
+        codeText.text =
+            question.codeBefore +
+            " " +
+            invisibleMissingSlot +
+            " " +
+            question.codeAfter;
+
+        outputText.text =
+            "Output: " + question.output;
+
+        // Display ??? inside the Block
+        string missingColorHex =
+            ColorUtility.ToHtmlStringRGB(missingSlotColor);
+
+        missingAnswerText.text =
+            "<color=#" +
+            missingColorHex +
+            ">???</color>";
+
+        codeText.ForceMeshUpdate();
+
+        SaveMissingBlockPosition();
     }
 
     public void DisplaySelectedAnswer(string selectedAnswer)
@@ -60,9 +101,74 @@ public class CppQuestionManager : MonoBehaviour
         if (question == null)
             return;
 
-        codeText.text = question.codeBefore + " " + selectedAnswer + " " + question.codeAfter;
+        string colorHex =
+            ColorUtility.ToHtmlStringRGB(correctAnswerColor);
 
-        missingSlotText.text = selectedAnswer;
+        missingAnswerText.text =
+            "<color=#" +
+            colorHex +
+            ">" +
+            selectedAnswer +
+            "</color>";
+
+        if (missingBlock != null && blockPositionSaved)
+        {
+            missingBlock.transform.position =
+                missingBlockPosition;
+        }
+    }
+
+    private void SaveMissingBlockPosition()
+    {
+        if (missingBlock == null || codeText == null)
+            return;
+
+        codeText.ForceMeshUpdate();
+
+        TMP_TextInfo textInfo = codeText.textInfo;
+
+        int questionMarkIndex = -1;
+
+        for (int i = 0; i < textInfo.characterCount - 2; i++)
+        {
+            if (textInfo.characterInfo[i].character == '?' &&
+                textInfo.characterInfo[i + 1].character == '?' &&
+                textInfo.characterInfo[i + 2].character == '?')
+            {
+                questionMarkIndex = i;
+                break;
+            }
+        }
+
+        if (questionMarkIndex == -1)
+        {
+            Debug.LogWarning("Could not find ??? in CodeText.");
+            return;
+        }
+
+        TMP_CharacterInfo firstCharacter =
+            textInfo.characterInfo[questionMarkIndex];
+
+        TMP_CharacterInfo lastCharacter =
+            textInfo.characterInfo[questionMarkIndex + 2];
+
+        Vector3 center =
+            (firstCharacter.bottomLeft +
+             lastCharacter.topRight) / 2f;
+
+        missingBlockPosition =
+            codeText.transform.TransformPoint(center);
+
+        blockPositionSaved = true;
+
+        missingBlock.transform.position =
+            missingBlockPosition;
+
+        RectTransform blockRect =
+            missingBlock.GetComponent<RectTransform>();
+
+        blockRect.sizeDelta =
+            new Vector2(blockWidth, blockHeight);
     }
 
     public void NextQuestion()
