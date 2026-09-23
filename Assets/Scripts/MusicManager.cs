@@ -6,6 +6,7 @@ public class MusicManager : MonoBehaviour
 
     [Header("Audio Clips")]
     public AudioClip buttonClickSFX;
+    public AudioClip buttonPopSFX;
     public AudioClip backgroundMusic;
 
     [Header("Volume Settings")]
@@ -53,6 +54,14 @@ public class MusicManager : MonoBehaviour
         if (buttonClickSFX != null)
         {
             sfxSource.PlayOneShot(buttonClickSFX, sfxVolume);
+        }
+    }
+
+    public void PlayButtonPopSFX()
+    {
+        if (buttonPopSFX != null)
+        {
+            sfxSource.PlayOneShot(buttonPopSFX, sfxVolume);
         }
     }
 }
