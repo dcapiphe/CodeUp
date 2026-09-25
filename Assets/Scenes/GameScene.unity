@@ -2568,11 +2568,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4be579e5c107334a98d745ca92c851c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cppQuestionManager: {fileID: 0}
   playerHP: 5
   enemyHP: 5
   playerHPText: {fileID: 547516214}
   enemyHPText: {fileID: 226196145}
-  missingSlotText: {fileID: 1669721834}
   outputText: {fileID: 12428210}
   timerText: {fileID: 760840736}
   attackButton: {fileID: 1569809723}
@@ -2599,7 +2599,6 @@ MonoBehaviour:
   - {fileID: 169755189}
   - {fileID: 57118176}
   timeLimit: 15
-  correctAnswer: <<
 --- !u!4 &808747827
 Transform:
   m_ObjectHideFlags: 0
@@ -4858,6 +4857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonClickSFX: {fileID: 8300000, guid: e4129198c29af494abb7991cd1e467b4, type: 3}
+  buttonPopSFX: {fileID: 0}
   backgroundMusic: {fileID: 0}
   bgmVolume: 1
   sfxVolume: 1
