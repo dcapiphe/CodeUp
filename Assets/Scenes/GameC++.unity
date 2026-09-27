@@ -188,8 +188,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279826944
+  m_fontColor: {r: 0, g: 0.9811321, b: 0.095920816, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -206,8 +206,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1863,6 +1863,7 @@ GameObject:
   - component: {fileID: 536236101}
   - component: {fileID: 536236103}
   - component: {fileID: 536236102}
+  - component: {fileID: 536236104}
   m_Layer: 5
   m_Name: EnemyImage
   m_TagString: Untagged
@@ -1886,7 +1887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151, y: -20.385}
+  m_AnchoredPosition: {x: 151, y: -39}
   m_SizeDelta: {x: 152.5587, y: 227.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &536236102
@@ -1927,6 +1928,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536236100}
   m_CullTransparentMesh: 1
+--- !u!114 &536236104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536236100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20ab0b478f57d44e9ed4b2851ac37c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 5
 --- !u!1 &547516212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,8 +3064,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.242, y: 0.5284}
-  m_SizeDelta: {x: 73.034, y: 73.034}
+  m_AnchoredPosition: {x: -58.9, y: 0.6}
+  m_SizeDelta: {x: 58.3246, y: 58.3246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947041428
 MonoBehaviour:
@@ -3871,32 +3885,144 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - codeBefore: 'cout '
-    correctAnswer: <<
-    codeAfter: ' "Hello World"'
-    output: Hello World
-  - codeBefore: 'int x '
+  - codeBefore: 
+    correctAnswer: cout
+    codeAfter: ' << "Hello!";'
+    output: Hello!
+  - codeBefore: 'int age; '
+    correctAnswer: cin
+    codeAfter: ' >> age;'
+    output: User enters an age
+  - codeBefore: 
+    correctAnswer: int
+    codeAfter: ' score = 10;'
+    output: 10
+  - codeBefore: 
+    correctAnswer: char
+    codeAfter: ' grade = ''A'';'
+    output: A
+  - codeBefore: 
+    correctAnswer: bool
+    codeAfter: ' passed = true;'
+    output: true
+  - codeBefore: 
+    correctAnswer: void
+    codeAfter: ' greet() { cout << "Hi"; }'
+    output: Hi
+  - codeBefore: 
+    correctAnswer: for
+    codeAfter: ' (int i = 0; i < 3; i++) cout << i;'
+    output: 012
+  - codeBefore: 'int score '
     correctAnswer: =
-    codeAfter: ' 5;'
-    output: 5
-  - codeBefore: 'int x = 2 '
+    codeAfter: ' 100;'
+    output: 100
+  - codeBefore: 'if (score '
+    correctAnswer: ==
+    codeAfter: ' 100) cout << "Perfect";'
+    output: Perfect
+  - codeBefore: 'if (score '
+    correctAnswer: '!='
+    codeAfter: ' 0) cout << "Active";'
+    output: Active
+  - codeBefore: 'int total = 5 '
     correctAnswer: +
     codeAfter: ' 3;'
+    output: 8
+  - codeBefore: 'int score = 10 '
+    correctAnswer: '-'
+    codeAfter: ' 4;'
+    output: 6
+  - codeBefore: 'int total = 4 '
+    correctAnswer: '*'
+    codeAfter: ' 5;'
+    output: 20
+  - codeBefore: 'int result = 10 '
+    correctAnswer: /
+    codeAfter: ' 2;'
     output: 5
-  - codeBefore: 'if (x '
+  - codeBefore: 'if (score '
+    correctAnswer: <
+    codeAfter: ' 50) cout << "Low";'
+    output: Low
+  - codeBefore: 'if (score '
     correctAnswer: '>'
-    codeAfter: ' 5)'
-    output: Condition is true
+    codeAfter: ' 50) cout << "High";'
+    output: High
+  - codeBefore: 'int score = 100 '
+    correctAnswer: ;
+    codeAfter: 
+    output: 100
+  - codeBefore: 'cout '
+    correctAnswer: (
+    codeAfter: ' "Hello");'
+    output: Hello
+  - codeBefore: 'if (score > 50) '
+    correctAnswer: '{'
+    codeAfter: ' cout << "Pass"; }'
+    output: Pass
+  - codeBefore: 'cout '
+    correctAnswer: <<
+    codeAfter: ' "Hello!";'
+    output: Hello!
+  - codeBefore: 'cout '
+    correctAnswer: <<
+    codeAfter: ' "Hello!";'
+    output: Hello!
+  - codeBefore: 'cout << "Hello" << '
+    correctAnswer: endl
+    codeAfter: ' ;'
+    output: Hello
+  - codeBefore: 
+    correctAnswer: cout
+    codeAfter: ' << "Welcome!";'
+    output: Welcome!
   - codeBefore: 
     correctAnswer: if
-    codeAfter: ' (x > 5)'
-    output: If statement
+    codeAfter: ' (x == 10) cout << "Correct";'
+    output: Correct
+  - codeBefore: 'cout '
+    correctAnswer: <<
+    codeAfter: ' "Hello CodeUp!";'
+    output: Hello CodeUp!
+  - codeBefore: 'int total = 10 '
+    correctAnswer: +
+    codeAfter: ' 5;'
+    output: 15
+  - codeBefore: 'if (x '
+    correctAnswer: ==
+    codeAfter: ' 10) cout << "Match";'
+    output: Match
+  - codeBefore: 'cout << "CodeUp!" << '
+    correctAnswer: endl
+    codeAfter: ' ;'
+    output: CodeUp!
+  - codeBefore: 'int score = 20 '
+    correctAnswer: '-'
+    codeAfter: ' 7;'
+    output: 13
+  - codeBefore: 'if (score '
+    correctAnswer: '>'
+    codeAfter: ' 50) cout << "Pass";'
+    output: Pass
+  - codeBefore: 
+    correctAnswer: char
+    codeAfter: ' letter = ''A'';'
+    output: A
+  - codeBefore: 'cin '
+    correctAnswer: '>>'
+    codeAfter: ' number;'
+    output: User enters a number
+  - codeBefore: 'if (score '
+    correctAnswer: '!='
+    codeAfter: ' 0) cout << "Active";'
+    output: Active
   codeText: {fileID: 1478914612}
   missingBlock: {fileID: 947041428}
   missingAnswerText: {fileID: 1363282279}
   outputText: {fileID: 12428210}
-  blockWidth: 70
-  blockHeight: 70
+  blockWidth: 65
+  blockHeight: 65
   correctAnswerColor: {r: 0.21568629, g: 0.21568629, b: 0.20784315, a: 1}
   missingSlotColor: {r: 0.21568628, g: 0.21568628, b: 0.20784314, a: 1}
 --- !u!4 &1336468447
@@ -4006,8 +4132,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4476,8 +4602,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
