@@ -118,6 +118,27 @@ public class CppQuestionManager : MonoBehaviour
         }
     }
 
+    public string RevealHint()
+    {
+        QuestionData question = GetCurrentQuestion();
+
+        if (question == null)
+            return "";
+
+        // Display the correct answer
+        missingAnswerText.text = question.correctAnswer;
+
+        // Directly change the TMP text color
+        missingAnswerText.color = correctAnswerColor;
+
+        if (missingBlock != null && blockPositionSaved)
+        {
+            missingBlock.transform.position = missingBlockPosition;
+        }
+
+        return question.correctAnswer;
+    }
+
     private void SaveMissingBlockPosition()
     {
         if (missingBlock == null || codeText == null)
