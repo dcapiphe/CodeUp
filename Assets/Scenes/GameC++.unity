@@ -2440,7 +2440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000066757, y: 398}
+  m_AnchoredPosition: {x: -0.0000066757, y: 411}
   m_SizeDelta: {x: 168.8955, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695608340
@@ -5065,6 +5065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonClickSFX: {fileID: 8300000, guid: e4129198c29af494abb7991cd1e467b4, type: 3}
+  buttonPopSFX: {fileID: 0}
   backgroundMusic: {fileID: 0}
   bgmVolume: 1
   sfxVolume: 1
