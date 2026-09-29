@@ -35,8 +35,21 @@ public class Enemy : MonoBehaviour
 
         currentHP--;
 
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.PlayEnemyHurtSFX();
+        }
+
         if (currentHP < 0)
             currentHP = 0;
+
+        UICharacterAnimation animation =
+            GetComponent<UICharacterAnimation>();
+
+        if (animation != null)
+        {
+            animation.PlayDamageFlash();
+        }
 
         Debug.Log(gameObject.name + " HP: " + currentHP);
 

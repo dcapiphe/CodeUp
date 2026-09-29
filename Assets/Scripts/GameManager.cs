@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text enemyHPText;
     public TMP_Text outputText;
     public TMP_Text timerText;
+    public Image playerImage;
 
     [Header("Game Buttons")]
     public Button attackButton;
@@ -129,9 +130,15 @@ public class GameManager : MonoBehaviour
 
         pauseButton.onClick.AddListener(PauseGame);
         resumeButton.onClick.AddListener(ResumeGame);
+
         backToMenuButton.onClick.AddListener(BackToMenu);
+        backToMenuButton.onClick.AddListener(PlayButtonSFX);
+
         hintButton.onClick.AddListener(UseHint);
+        hintButton.onClick.AddListener(PlayHintSFX);
+
         gameOverBackToMenuButton.onClick.AddListener(BackToMenu);
+        gameOverBackToMenuButton.onClick.AddListener(PlayButtonSFX);
 
 
         for (int i = 0; i < syntaxButtons.Length; i++)
@@ -253,8 +260,24 @@ public class GameManager : MonoBehaviour
     {
         playerHP--;
 
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.PlayPlayerHurtSFX();
+        }
+
         if (playerHP < 0)
             playerHP = 0;
+
+        if (playerImage != null)
+        {
+            UICharacterAnimation animation =
+                playerImage.GetComponent<UICharacterAnimation>();
+
+            if (animation != null)
+            {
+                animation.PlayDamageFlash();
+            }
+        }
 
         UpdateHPUI();
 
@@ -272,6 +295,12 @@ public class GameManager : MonoBehaviour
             return;
 
         currentEnemy.TakeDamage();
+
+        // Play enemy hurt SFX
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.PlayEnemyHurtSFX();
+        }
 
         UpdateHPUI();
 
@@ -374,6 +403,11 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 0f;
 
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.PauseBGM();
+        }
+
         Debug.Log("Game Paused");
     }
 
@@ -382,6 +416,11 @@ public class GameManager : MonoBehaviour
         pausePanel.SetActive(false);
 
         Time.timeScale = 1f;
+
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.ResumeBGM();
+        }
 
         Debug.Log("Game Resumed");
     }
@@ -459,6 +498,11 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
 
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.PauseBGM();
+        }
+
         if (gameOverPanel != null)
         {
             gameOverPanel.SetActive(true);
@@ -470,6 +514,22 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("GAME OVER! Final Score: " + score);
+    }
+
+    private void PlayButtonSFX()
+    {
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.PlayButtonSFX();
+        }
+    }
+
+    private void PlayHintSFX()
+    {
+        if (GameMusicManager.Instance != null)
+        {
+            GameMusicManager.Instance.PlayHintSFX();
+        }
     }
 
 

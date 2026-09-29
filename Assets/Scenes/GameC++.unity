@@ -938,6 +938,7 @@ GameObject:
   - component: {fileID: 158470836}
   - component: {fileID: 158470835}
   - component: {fileID: 158470834}
+  - component: {fileID: 158470837}
   m_Layer: 5
   m_Name: EnemyImage_04
   m_TagString: Untagged
@@ -1015,6 +1016,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158470832}
   m_CullTransparentMesh: 1
+--- !u!114 &158470837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158470832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: -0.02
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &169755187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,127 +1511,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309539543}
   m_CullTransparentMesh: 1
---- !u!1 &318663735
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 318663739}
-  - component: {fileID: 318663738}
-  - component: {fileID: 318663737}
-  - component: {fileID: 318663736}
-  m_Layer: 5
-  m_Name: Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &318663736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318663735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 318663737}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &318663737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318663735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &318663738
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318663735}
-  m_CullTransparentMesh: 1
---- !u!224 &318663739
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318663735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2056262123}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &360180779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,6 +1523,7 @@ GameObject:
   - component: {fileID: 360180783}
   - component: {fileID: 360180782}
   - component: {fileID: 360180781}
+  - component: {fileID: 360180784}
   m_Layer: 5
   m_Name: EnemyImage_05
   m_TagString: Untagged
@@ -1703,6 +1601,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360180779}
   m_CullTransparentMesh: 1
+--- !u!114 &360180784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360180779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: -0.02
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &369618661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,9 +1701,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1919,9 +1834,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2186,9 +2101,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2318,7 +2233,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 447524103}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayHintSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &447524103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2439,7 +2366,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 499247423}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &499247423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2810,6 +2749,7 @@ GameObject:
   - component: {fileID: 536236103}
   - component: {fileID: 536236102}
   - component: {fileID: 536236104}
+  - component: {fileID: 536236105}
   m_Layer: 5
   m_Name: EnemyImage_01
   m_TagString: Untagged
@@ -2887,6 +2827,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+--- !u!114 &536236105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536236100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: -0.02
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &538067332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,6 +3124,7 @@ GameObject:
   - component: {fileID: 578201481}
   - component: {fileID: 578201480}
   - component: {fileID: 578201479}
+  - component: {fileID: 578201482}
   m_Layer: 5
   m_Name: EnemyImage_02
   m_TagString: Untagged
@@ -3244,6 +3202,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578201477}
   m_CullTransparentMesh: 1
+--- !u!114 &578201482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578201477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: -0.02
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &580695657
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,9 +3302,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3389,6 +3364,7 @@ GameObject:
   - component: {fileID: 599258564}
   - component: {fileID: 599258563}
   - component: {fileID: 599258562}
+  - component: {fileID: 599258565}
   m_Layer: 5
   m_Name: EnemyImage_08
   m_TagString: Untagged
@@ -3466,6 +3442,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599258560}
   m_CullTransparentMesh: 1
+--- !u!114 &599258565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599258560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: 0.06
+  squashSpeed: -0.02
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &621159327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3973,7 +3966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 752974034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &752974034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4195,6 +4200,7 @@ MonoBehaviour:
   enemyHPText: {fileID: 226196145}
   outputText: {fileID: 12428210}
   timerText: {fileID: 760840736}
+  playerImage: {fileID: 1968117539}
   attackButton: {fileID: 1569809723}
   previousButton: {fileID: 1073063231}
   nextButton: {fileID: 372852553}
@@ -4328,6 +4334,7 @@ GameObject:
   - component: {fileID: 859552561}
   - component: {fileID: 859552560}
   - component: {fileID: 859552559}
+  - component: {fileID: 859552562}
   m_Layer: 5
   m_Name: EnemyImage_06
   m_TagString: Untagged
@@ -4405,6 +4412,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859552557}
   m_CullTransparentMesh: 1
+--- !u!114 &859552562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859552557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: -0.02
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &872615139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,9 +4689,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4798,9 +4822,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4930,7 +4954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 939155899}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &939155899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5346,9 +5382,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5613,9 +5649,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5746,9 +5782,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5888,6 +5924,7 @@ GameObject:
   - component: {fileID: 1283104760}
   - component: {fileID: 1283104759}
   - component: {fileID: 1283104758}
+  - component: {fileID: 1283104761}
   m_Layer: 5
   m_Name: EnemyImage_03
   m_TagString: Untagged
@@ -5965,6 +6002,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283104756}
   m_CullTransparentMesh: 1
+--- !u!114 &1283104761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283104756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: -0.02
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &1292602699
 GameObject:
   m_ObjectHideFlags: 0
@@ -6289,16 +6343,16 @@ MonoBehaviour:
     output: Hi
   - codeBefore: 
     correctAnswer: for
-    codeAfter: ' (int i = 0; i < 3; i++) cout << i;'
+    codeAfter: ' (i=0;i<2;i++) cout<<i;'
     output: 012
   - codeBefore: 'int score '
     correctAnswer: =
     codeAfter: ' 100;'
     output: 100
-  - codeBefore: 'if (score '
+  - codeBefore: 'if (x '
     correctAnswer: ==
-    codeAfter: ' 100) cout << "Perfect";'
-    output: Perfect
+    codeAfter: ' 5) cout<<"Yes";'
+    output: Yes
   - codeBefore: 'if (score '
     correctAnswer: '!='
     codeAfter: ' 0) cout << "Active";'
@@ -6980,9 +7034,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7321,7 +7375,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1565753659}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1565753659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7443,8 +7509,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
         m_MethodName: PlayButtonSFX
         m_Mode: 1
         m_Arguments:
@@ -7576,9 +7642,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786763621}
-        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
-        m_MethodName: PlayButtonSFX
+      - m_Target: {fileID: 1886444827}
+        m_TargetAssemblyTypeName: GameMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonPopSFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8015,6 +8081,7 @@ GameObject:
   - component: {fileID: 1636075839}
   - component: {fileID: 1636075838}
   - component: {fileID: 1636075837}
+  - component: {fileID: 1636075840}
   m_Layer: 5
   m_Name: EnemyImage_07
   m_TagString: Untagged
@@ -8092,7 +8159,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636075835}
   m_CullTransparentMesh: 1
---- !u!1 &1786763618
+--- !u!114 &1636075840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636075835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: -0.02
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
+--- !u!1 &1886444826
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8100,42 +8184,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1786763622}
-  - component: {fileID: 1786763621}
+  - component: {fileID: 1886444828}
+  - component: {fileID: 1886444827}
   m_Layer: 0
-  m_Name: MusicManager
+  m_Name: GameMusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1786763621
+--- !u!114 &1886444827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786763618}
+  m_GameObject: {fileID: 1886444826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6d25d40161b2104ca2ca5fe745d6455, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d75461357d0252489eed221f3472c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonClickSFX: {fileID: 8300000, guid: e4129198c29af494abb7991cd1e467b4, type: 3}
-  buttonPopSFX: {fileID: 0}
-  backgroundMusic: {fileID: 0}
-  bgmVolume: 1
-  sfxVolume: 1
---- !u!4 &1786763622
+  buttonClickSFX: {fileID: 8300000, guid: 770262509ef641a44982ccfef4d6bf4a, type: 3}
+  buttonPopSFX: {fileID: 8300000, guid: c027079d7d45aa04c87607ca432b6d46, type: 3}
+  playerHurtSFX: {fileID: 8300000, guid: da172038bde5ab745a59033c03adfa4f, type: 3}
+  enemyHurtSFX: {fileID: 8300000, guid: da172038bde5ab745a59033c03adfa4f, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 15736e9be39412a4f9ba21cca08caaa1, type: 3}
+  hintSFX: {fileID: 8300000, guid: 2d19a16c73f24024dbddcc76afef225a, type: 3}
+  buttonClickVolume: 1.2
+  buttonPopVolume: 1.2
+  playerHurtVolume: 1
+  enemyHurtVolume: 1
+  hintVolume: 0.3
+  backgroundMusicVolume: 0.5
+--- !u!4 &1886444828
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786763618}
+  m_GameObject: {fileID: 1886444826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.3141, y: 409.58322, z: -1.8397677}
+  m_LocalPosition: {x: 421.86575, y: 471.81937, z: -0.063129604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8286,6 +8377,7 @@ GameObject:
   - component: {fileID: 1968117538}
   - component: {fileID: 1968117540}
   - component: {fileID: 1968117539}
+  - component: {fileID: 1968117541}
   m_Layer: 5
   m_Name: PlayerImage
   m_TagString: Untagged
@@ -8350,6 +8442,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968117537}
   m_CullTransparentMesh: 1
+--- !u!114 &1968117541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968117537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2978f8aad1567b74c96499505e6d436d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableIdleAnimation: 1
+  squashAmount: 0.03
+  squashSpeed: 2.5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.15
 --- !u!1 &2009102994
 GameObject:
   m_ObjectHideFlags: 0
@@ -8484,140 +8593,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009102994}
   m_CullTransparentMesh: 1
---- !u!1 &2056262122
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2056262123}
-  - component: {fileID: 2056262125}
-  - component: {fileID: 2056262124}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2056262123
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056262122}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 318663739}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2056262124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056262122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Button
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &2056262125
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2056262122}
-  m_CullTransparentMesh: 1
 --- !u!1 &2074364000
 GameObject:
   m_ObjectHideFlags: 0
@@ -8694,6 +8669,5 @@ SceneRoots:
   - {fileID: 504137153}
   - {fileID: 2074364003}
   - {fileID: 808747827}
-  - {fileID: 1786763622}
   - {fileID: 1336468447}
-  - {fileID: 318663739}
+  - {fileID: 1886444828}
