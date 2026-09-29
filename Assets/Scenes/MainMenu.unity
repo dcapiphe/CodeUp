@@ -249,7 +249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e5c7b2306b50fac4989c00fea6c1c01c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22db8a299d1f2f1468bb8abaea823d17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -333,8 +333,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2182,7 +2182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e5c7b2306b50fac4989c00fea6c1c01c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22db8a299d1f2f1468bb8abaea823d17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e5c7b2306b50fac4989c00fea6c1c01c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22db8a299d1f2f1468bb8abaea823d17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3174,7 +3174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e5c7b2306b50fac4989c00fea6c1c01c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22db8a299d1f2f1468bb8abaea823d17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3443,8 +3443,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4085,10 +4085,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonClickSFX: {fileID: 8300000, guid: 770262509ef641a44982ccfef4d6bf4a, type: 3}
-  buttonPopSFX: {fileID: 8300000, guid: e4129198c29af494abb7991cd1e467b4, type: 3}
+  buttonPopSFX: {fileID: 8300000, guid: fde3a3bc9671b4243bd8f8ae0d9bb072, type: 3}
   backgroundMusic: {fileID: 0}
   bgmVolume: 1
-  sfxVolume: 0.5
+  sfxVolume: 1
 --- !u!4 &1622585775
 Transform:
   m_ObjectHideFlags: 0
@@ -4170,8 +4170,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5219,8 +5219,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288453788
-  m_fontColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
