@@ -6441,10 +6441,6 @@ MonoBehaviour:
     correctAnswer: char
     codeAfter: ' letter = ''A'';'
     output: A
-  - codeBefore: 'cin '
-    correctAnswer: '>>'
-    codeAfter: ' number;'
-    output: User enters a number
   - codeBefore: 'if (score '
     correctAnswer: '!='
     codeAfter: ' 0) cout << "Active";'
