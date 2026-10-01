@@ -4102,9 +4102,9 @@ MonoBehaviour:
   buttonClickSFX: {fileID: 8300000, guid: 770262509ef641a44982ccfef4d6bf4a, type: 3}
   buttonPopSFX: {fileID: 8300000, guid: c027079d7d45aa04c87607ca432b6d46, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 49eb9fc96cc997a4a91ac19b3ed36cd5, type: 3}
-  buttonClickVolume: 1.2
-  buttonPopVolume: 1.2
-  backgroundMusicVolume: 0.5
+  buttonClickVolume: 1
+  buttonPopVolume: 1
+  backgroundMusicVolume: 0.2
 --- !u!1 &1731939360
 GameObject:
   m_ObjectHideFlags: 0

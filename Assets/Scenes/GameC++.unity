@@ -8207,12 +8207,12 @@ MonoBehaviour:
   enemyHurtSFX: {fileID: 8300000, guid: da172038bde5ab745a59033c03adfa4f, type: 3}
   backgroundMusic: {fileID: 8300000, guid: 15736e9be39412a4f9ba21cca08caaa1, type: 3}
   hintSFX: {fileID: 8300000, guid: 2d19a16c73f24024dbddcc76afef225a, type: 3}
-  buttonClickVolume: 1.2
-  buttonPopVolume: 1.2
-  playerHurtVolume: 1
-  enemyHurtVolume: 1
-  hintVolume: 0.3
-  backgroundMusicVolume: 0.5
+  buttonClickVolume: 1
+  buttonPopVolume: 1
+  playerHurtVolume: 1.2
+  enemyHurtVolume: 1.2
+  hintVolume: 0.2
+  backgroundMusicVolume: 0.2
 --- !u!4 &1886444828
 Transform:
   m_ObjectHideFlags: 0
